@@ -1,41 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recepcionista Digital</title>
 <link rel="stylesheet" href="style.css">
+<title>Recepcionista Digital</title>
+
 </head>
-
 <body>
-
 <div class="app">
-
-  <!-- TELA 1 -->
-  <div class="screen active" id="tela1">
-    <img src="avatar.png" class="avatar">
-
-    <div class="balao" id="fala1"></div>
-
-    <input class="input" id="nome" placeholder="Digite seu nome">
-    <button class="btn" onclick="irTela2()">Continuar</button>
-  </div>
-
-  <!-- TELA 2 -->
-  <div class="screen" id="tela2">
-    <img src="avatar.png" class="avatar">
-
-    <div class="balao" id="fala2"></div>
-
-    <div class="cards" id="cards"></div>
-
-    <div class="footer">
-      <button class="btn whats" onclick="enviarWhats()">Agendar no WhatsApp</button>
+  <div class="hero">
+    <img src="https://i.imgur.com/8Km9tLL.png" class="avatar">
+    <h2>Recepcionista Digital</h2>
+  </div>  <!-- Tela 1 -->  <div class="screen active" id="tela1">
+    <div class="type" id="txt1"></div>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <button onclick="irTela2()">Continuar</button>
+  </div>  <!-- Tela 2 -->  <div class="screen" id="tela2">
+    <div class="type" id="txt2"></div>
+    <div class="services">
+      <div class="card" onclick="select(this,'Cílios')">
+        <img src="https://i.imgur.com/UYiroys.png">
+        <div>
+          <strong>Cílios</strong><br><small>Extensão de cílios</small>
+        </div>
+      </div>
+      <div class="card" onclick="select(this,'Sobrancelha')">
+        <img src="https://i.imgur.com/UYiroys.png">
+        <div>
+          <strong>Sobrancelha</strong><br><small>Design e henna</small>
+        </div>
+      </div>
+      <div class="card" onclick="select(this,'Limpeza de pele')">
+        <img src="https://i.imgur.com/UYiroys.png">
+        <div>
+          <strong>Limpeza de pele</strong><br><small>Tratamento facial</small>
+        </div>
+      </div>
     </div>
+    <button class="whats" onclick="whatsapp()">Agendar no WhatsApp</button>
   </div>
-
 </div>
-
 <script src="app.js"></script>
+
 </body>
 </html>
